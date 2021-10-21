@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
+import App from './App.jsx';
 import './index.scss';
-import Dimensions from './Dimensions.jsx';
 
-ReactDOM.render(<Dimensions />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
