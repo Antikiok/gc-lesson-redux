@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header.jsx';
+import { userData } from './userData-context';
 
-const App = () => (
-  <div className="page">
-    <Header />
-  </div>
-);
+const App = () => {
+  useState({
+    userData: userData.teslaUser,
+  });
+
+  return (
+    <div className="page">
+      <Header />
+    </div>
+  );
+};
 
 export default App;
