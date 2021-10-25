@@ -26,5 +26,12 @@ store.subscribe(() => {
   const state = store.getState();
   const currentValue = state.history.reduce((acc, value) => acc + value, 0);
   const historyString = state.history.join('');
-  resultElem.textContent = state.history.length === 0 ? '' : `${historyString} = ${currentValue}`;
+  const lastValue = state.history[state.history.length - 1];
+  if (state.history.length === 0) {
+    return (resultElem.textContent = '');
+  } else if (lastValue === 1) {
+    return (resultElem.textContent = `+${state.history.join('+')} = ${currentValue}`);
+  } else {
+    return (resultElem.textContent = `${historyString} = ${currentValue}`);
+  }
 });
