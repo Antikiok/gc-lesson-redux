@@ -25,13 +25,17 @@ resetBtn.addEventListener('click', onReset);
 store.subscribe(() => {
   const state = store.getState();
   const currentValue = state.history.reduce((acc, value) => acc + value, 0);
-  const historyString = state.history.join('');
-  const lastValue = state.history[state.history.length - 1];
+  console.log(state.history);
+
   if (state.history.length === 0) {
     return (resultElem.textContent = '');
-  } else if (lastValue === 1) {
-    return (resultElem.textContent = `+${state.history.join('+')} = ${currentValue}`);
-  } else {
-    return (resultElem.textContent = `${historyString} = ${currentValue}`);
   }
+  const result = state.history.map(el => {
+    if (el > 0) {
+      return `+${el}`;
+    }
+    return `${el}`;
+  });
+
+  resultElem.textContent = `${result.join('')} = ${currentValue}`;
 });
