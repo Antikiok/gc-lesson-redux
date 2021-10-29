@@ -1,9 +1,9 @@
-export const ADDUSER = 'USERACTIONS/ADDUSER';
-export const DELETEUSER = 'USERACTIONS/DELETEUSER';
+export const ADDUSER = 'ADD/ADDUSER';
+export const DELETEUSER = 'DELETE/DELETEUSER';
 
-export const addUser = userList => ({
+export const addUser = userData => ({
   type: ADDUSER,
-  userList,
+  userData,
 });
 
 export const deleteUser = id => ({
