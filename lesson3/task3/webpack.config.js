@@ -9,7 +9,7 @@ module.exports = (env, argv) => {
   const config = {
     mode: 'development',
     entry: {
-      main: path.resolve(__dirname, './src/index.jsx'),
+      main: path.resolve(__dirname, './src/index.js'),
     },
     output: {
       path: path.resolve(__dirname, './dist'),
