@@ -14,12 +14,25 @@ body {
   align-items: center;
 }
 
-.btn {
-  height: 32px;
-  border: 3px solid #ccc;
-  outline: none;
-  cursor: pointer;
-  border-radius: 8px;
-  margin: 16px;
-  font-size: 18px;
+.counter {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__button {
+    width: 48px;
+    height: 48px;
+    border: 2px solid grey;
+    border-radius: 8px;
+    background: transparent;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__value {
+    margin: 16px;
+  }
 }

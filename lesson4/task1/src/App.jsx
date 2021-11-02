@@ -5,7 +5,7 @@ import store from './store';
 
 const App = () => (
   <Provider store={store}>
-    <Counter />;
+    <Counter />
   </Provider>
 );
 
