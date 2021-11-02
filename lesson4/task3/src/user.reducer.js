@@ -1,11 +1,8 @@
-import { GO_PREV, GO_NEXT } from './users.actions.js';
-import { users } from '../users';
+import { GO_PREV, GO_NEXT } from './user.actions';
+import users from './users';
 
 const initialState = {
-  users: {
-    usersList: [...users],
-    currentPage: 0,
-  },
+  users: { usersList: [...users], currentPage: 0 },
 };
 
 const userReducer = (state = initialState, action) => {

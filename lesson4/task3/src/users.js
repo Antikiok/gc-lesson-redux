@@ -1,4 +1,4 @@
-export const users = [
+export default [
   {
     id: 'id-0',
     age: 21,

@@ -1,14 +1,8 @@
-import { createStore, combineReducers } from 'redux';
-import counterReducer from './counter/counter.reducer';
-import usersReducer from './users/users.reducer';
-
-const reducer = combineReducers({
-  users: usersReducer,
-  counter: counterReducer,
-});
+import { createStore } from 'redux';
+import userReducer from './user.reducer';
 
 const store = createStore(
-  reducer,
+  userReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
