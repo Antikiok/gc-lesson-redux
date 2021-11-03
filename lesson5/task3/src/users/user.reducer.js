@@ -9,11 +9,12 @@ const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_FILTER: {
       const searchText = action.payload;
+      const { usersList } = state.users;
 
       let filteredList = users;
 
       if (searchText) {
-        filteredList = state.users.usersList.filter(user =>
+        filteredList = usersList.filter(user =>
           user.name.toUpperCase().includes(searchText.toUpperCase()),
         );
       }
